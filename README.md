@@ -15,4 +15,6 @@ Jekyll plugin to generate nice photo galleries easily.
 
 ##1. Enable automatic thumbnail generation
 
-todo
+1. Install imagemagick for your system (e.g. apt-get install imagemagick for Linux or brew install imagemagick on macOS)
+2. Install jekyll-minimagick "gem install jekyll-minimagick".
+3. Remove the '#' in the file "_plugins/jekyll-generate-thumbnails.rb" to enable thumbnail generation
