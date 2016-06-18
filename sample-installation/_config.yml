@@ -17,6 +17,9 @@ url: "http://localhost:8000" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+owner:
+  disqus-shortname: theowinterch
+
 # Build settings
 markdown: kramdown
 

@@ -31,11 +31,11 @@
     <body id="js-body">
 
     <!-- Use CSS to set the width etc. of the gallery -->
-    <div id="main" role="main" style="width: 70%; margin: auto;">
+    <div id="main" role="main" style="width: 70%; margin: auto; margin-top: 30px;">
         <div class="wrap">
             <div class="page-feature">
               <div class="page-image">
-                <img src="{{ site.url }}/images/headers/selfie.jpg" class="page-feature-image" alt="{{ page.title }}">
+                <img src="{{ site.url }}/images/headers/header.jpg" class="page-feature-image" alt="{{ page.title }}">
                 {% if page.image.credit %}{% include image-credit.html %}{% endif %}
               </div><!-- /.page-image -->
             </div><!-- /.page-feature -->
@@ -107,54 +107,44 @@
       captions: true
     });
 
+    function appendImage(index) {
+        $('#gallery').append("<div itemscope itemtype=\"http:\/\/schema.org\/Photograph\">\r\n" +
+                "<a itemprop=\"image\" class=\"swipebox\" title=\"" + photos[index].title + "\" " +
+                "href=\"" + photos[index].url + "\">\r\n" +
+                "<img alt=\"" + photos[index].title + "\" itemprop=\"thumbnailUrl\"" +
+                "src=\"" + photos[index].thumbnail + "\"\/>\r\n" +
+                "<meta itemprop=\"name\" content=\"" + photos[index].title + "\" \/>\r\n" +
+                "<meta itemprop=\"isFamilyFriendly\" content=\"true\" \/>\r\n" +
+                "<meta itemprop=\"dateCreated\"" +
+                "content=\"" + photos[index].date + "\"\/>\r\n" +
+                "<div itemprop=\"creator\" itemscope itemtype=\"http:\/\/schema.org\/Person\">\r\n" +
+                " <div itemprop=\"sameAs\" href=\"http:\/\/theowinter.ch\/about\">\r\n" +
+                "<meta itemprop=\"name\" content=\"Theo Winter\"\/>\r\n" +
+                "<\/div>\r\n" +
+                "<\/div>\r\n<\/a>\r\n<\/div>");
+    }
+
     var initialPhotoDisplay = 30;
     if (photos.length < 30){
         initialPhotoDisplay = photos.length;
     }
 
     for (currentPosition; currentPosition < initialPhotoDisplay; currentPosition++) {
-      var i = currentPosition;
-      $('#gallery').append("<div itemscope itemtype=\"http:\/\/schema.org\/Photograph\">\r\n" +
-        "<a itemprop=\"image\" class=\"swipebox\" title=\""+photos[i].title+"\" " +
-        "href=\""+photos[i].url+"\">\r\n" +
-        "<img alt=\""+photos[i].title+"\" itemprop=\"thumbnailUrl\"" +
-        "src=\""+photos[i].thumbnail+"\"\/>\r\n" +
-        "<meta itemprop=\"name\" content=\""+photos[i].title+"\" \/>\r\n" +
-        "<meta itemprop=\"isFamilyFriendly\" content=\"true\" \/>\r\n" +
-        "<meta itemprop=\"dateCreated\"" +
-        "content=\""+photos[i].date+"\"\/>\r\n" +
-        "<div itemprop=\"creator\" itemscope itemtype=\"http:\/\/schema.org\/Person\">\r\n" +
-        " <div itemprop=\"sameAs\" href=\"http:\/\/theowinter.ch\/about\">\r\n" +
-        "<meta itemprop=\"name\" content=\"Theo Winter\"\/>\r\n" +
-        "<\/div>\r\n" +
-        "<\/div>\r\n<\/a>\r\n<\/div>");
+        var i = currentPosition;
+        appendImage(i);
     }
     $('#gallery').justifiedGallery('norewind');
 
     $("#gallery").fadeIn(500);
-
-    $(window).scroll(function() {
-      if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        var jump = currentPosition+10;
-        for (currentPosition; currentPosition < jump; currentPosition++) {
-          var i = currentPosition;
-          $('#gallery').append("<div itemscope itemtype=\"http:\/\/schema.org\/Photograph\">\r\n" +
-            "<a itemprop=\"image\" class=\"swipebox\" title=\""+photos[i].title+"\" " +
-            "href=\""+photos[i].url+"\">\r\n" +
-            "<img alt=\""+photos[i].title+"\" itemprop=\"thumbnailUrl\"" +
-            "src=\""+photos[i].thumbnail+"\"\/>\r\n" +
-            "<meta itemprop=\"name\" content=\""+photos[i].title+"\" \/>\r\n" +
-            "<meta itemprop=\"isFamilyFriendly\" content=\"true\" \/>\r\n" +
-            "<meta itemprop=\"dateCreated\"" +
-            "content=\""+photos[i].date+"\"\/>\r\n" +
-            "<div itemprop=\"creator\" itemscope itemtype=\"http:\/\/schema.org\/Person\">\r\n" +
-            " <div itemprop=\"sameAs\" href=\"http:\/\/theowinter.ch\/about\">\r\n" +
-            "<meta itemprop=\"name\" content=\"Theo Winter\"\/>\r\n" +
-            "<\/div>\r\n" +
-            "<\/div>\r\n<\/a>\r\n<\/div>");
+        $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            var jump = currentPosition+10;
+            for (currentPosition; currentPosition < jump; currentPosition++) {
+                var i = currentPosition;
+                appendImage(i);
+            }
+            $('#gallery').justifiedGallery('norewind');
         }
-        $('#gallery').justifiedGallery('norewind');
-      }
     });
   }
 </script>
