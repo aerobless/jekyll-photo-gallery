@@ -40,28 +40,7 @@
                 {% if page.image.credit %}{% include image-credit.html %}{% endif %}
               </div><!-- /.page-image -->
             </div><!-- /.page-feature -->
-            <div class="page-title">
-              <h1>Recent trips</h1>
-            </div>
 
-            <div>
-              <div class="tiles">
-                {% for post in site.posts %}
-                  {% if post.layout == 'trip' %}
-                    {% include post-grid-cards.html %}
-                  {% endif %}
-                {% endfor %}
-              </div><!-- /.tiles -->
-            </div>
-
-            <div class="page-title">
-              <h1>Countries</h1>
-            </div>
-
-            <div class="page-title" style="clear:left;">
-              <h1>Photo Stream</h1>
-              {% if page.excerpt %}<h2>{{ page.excerpt }}</h2>{% endif %}
-            </div>
             <div class="archive-wrap">
               <div class="page-content">
                 <div id="gallery" style="display:none; margin-bottom: 20px;"></div>

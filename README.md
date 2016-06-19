@@ -14,6 +14,8 @@ Jekyll plugin to generate nice photo galleries easily.
 + Support for albums (coming soon)
 + easily extensible
 
+![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)
+
 #Installation Guide
 
 1. Download this repository and copy the contents of the folder "plugin" to your jekyll installation.
