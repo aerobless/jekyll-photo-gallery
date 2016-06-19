@@ -1,18 +1,22 @@
-# jekyll-photo-gallery
-Jekyll plugin to generate nice photo galleries easily.
-
+# Jekyll-Photo-Gallery
+With Jekyll-Photo-Gallery you can easily generate a photo gallery for your Jekyll site or blog.
+Jekyll-Photo-Gallery generates a static index and a page for every photo based on the layouts photoIndex.html and photo.html.
+These layouts can be easily adapted to fit the style of your site. The photo layout is also automatically enriched with metadata 
+such as photo location (Google Maps), ISO, F and speed values.  
+The whole plugin is setup so that new photos can be added with minimal effort. Thumbnails are automatically generated with ImageMagick on macOS and Linux. (It may work on windows as well, 
+but you need to find out how yourself.)
 
 #Features
 + Dynamically loaded photo stream
 + Justified gallery layout
 + One URL per picture allows for easy sharing
-+ Optional automatic, integrated thumbnail generation
++ Automatic thumbnail generation (on macOS, Linux)
 + One subpage per picture, ideal for SEO
-+ Easily adaptable layouts for gallery index & photo page
-+ Optional Google Maps Geolocation integration
++ Responsive photo view
++ Easily adaptable layouts
++ Google Maps Geolocation
 + EXIF tag support
-+ Support for albums (coming soon)
-+ easily extensible
++ Support for albums/trips (coming soon)
 
 ![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)
 
@@ -21,22 +25,22 @@ Jekyll plugin to generate nice photo galleries easily.
 1. Download this repository and copy the contents of the folder "plugin" to your jekyll installation.
 2. Install the following gems or add them to your gemfile if you're using bundler.
 
-    gem 'mini_magick'
-    gem 'exifr'
+    > gem 'exifr'
  
         
 #Optional
 
 ##1. Enable automatic thumbnail generation
 
-1. Install imagemagick for your system (e.g. apt-get install imagemagick for Linux or brew install imagemagick on macOS)
-2. Install jekyll-minimagick "gem install jekyll-minimagick".
-3. Remove the '#' in the file "_plugins/jekyll-generate-thumbnails.rb" to enable thumbnail generation
+1. Install imagemagick for your system (e.g. `apt-get install imagemagick` for Linux or `brew install imagemagick` on macOS)
+2. Install mini_magick `gem install mini_magick`
+3. Install jekyll-minimagick `gem install jekyll-minimagick`.
+4. Remove the '#' in the file "_plugins/jekyll-generate-thumbnails.rb" to enable thumbnail generation
 
 ##2. Enable Google Maps Geolocation
 
-coming soon..
-
+1. Obtain a Google Maps "Static Maps API key" from this site: https://developers.google.com/maps/documentation/static-maps/
+2. Open layouts/photo.html and replace the existing key (around line 113) **&key=AIzaSyCMXdSigC-sBH...** with your own key.
 
 #License (MIT)
  > Copyright (c) 2016 Theodor Winter
