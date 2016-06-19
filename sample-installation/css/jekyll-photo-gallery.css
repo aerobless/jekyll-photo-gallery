@@ -1,0 +1,26 @@
+.centeredG {
+    height: 400px;
+    width: 400px;
+    background: #eee;
+    margin: 50px auto;
+}
+
+.photoCentre
+{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 70%;
+    float: left;
+    margin-right: 20px
+}
+
+.photoInfo-content-right {
+    margin-left: 20px;
+    float: right;
+}

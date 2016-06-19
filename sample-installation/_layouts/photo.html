@@ -25,6 +25,7 @@
 
   <link rel="stylesheet" href="{{ site.url }}/css/main.css">
   <link rel="stylesheet" type="text/css" href="{{site.url}}/css/animsition.css">
+  <link rel="stylesheet" type="text/css" href="{{site.url}}/css/jekyll-photo-gallery.css">
   <!-- HTML5 Shiv and Media Query Support for IE -->
   <!--[if lt IE 9]>
   <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
@@ -50,8 +51,8 @@
       <meta itemprop="description" content="{{page.description}}"/>
       <!-- todo: content location -->
 
-      <div style="text-align: center;">
-        <img id="photo" src="{{ site.url }}/images/photography/{{ page.photo_url }}.jpg" class="entry-feature-image"
+      <div id="photo" style="text-align: center;">
+        <img id="picture" style="max-height:100%; max-width:100%;" src="{{ site.url }}/images/photography/{{ page.photo_url }}.jpg" class="entry-feature-image"
              alt="{{ page.title }}">
       </div>
       <div>
@@ -62,7 +63,7 @@
       </div>
       <br><br>
 
-      <div class="photoInfoContainer" style="width: 70%; margin: auto;">
+      <div class="photoInfoContainer">
         <div class="photoInfo1">
           <div>
             <h2 style="margin-bottom: 0px; margin-top: 0px;">{{page.title}}</h2>
@@ -125,6 +126,7 @@
 
 <script>
   var photo = $("#photo");
+  var picture = $("#picture");
   photo.click(function (e) {
     var pWidth = $(this).innerWidth();
     var pOffset = $(this).offset();
@@ -148,16 +150,27 @@
     }
   };
 
-  if (photo.width() < photo.height()) {
-    var imageHeight = window.innerHeight / 7 * 6;
-    photo.width("auto");
-    photo.height(imageHeight);
-    photo.marginLeft = "auto";
+  function fitImageSize(){
+    photo.height("100%");
+    var imageMax = $(window).height()/100*70;
+    var currentContentHeight = photo.height();
+    console.log(imageMax+"  "+currentContentHeight);
+    if(currentContentHeight > imageMax){
+      photo.height(imageMax);
+      photo.width("auto");
+      photo.marginLeft = "auto";
+      photo.height = picture.height;
+    }
   }
+  fitImageSize();
+
+  //window.addEventListener('resize', fitImageSize(), true);
+  window.onresize = function(event) {
+    fitImageSize();
+  };
 
   $(document).ready(function () {
-    //TODO: Fix issues on resize when image gets larger than width would allow (need a listener etc.)
-    //Image height according to window height
+    fitImageSize();
 
     //Dynamic Transition Support
     $(".animsition").animsition({
