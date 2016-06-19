@@ -19,6 +19,12 @@ github_username:  jekyll
 
 owner:
   disqus-shortname: theowinterch
+  name: Theodor Winter
+  email: theo@w1nter.com
+  googleplus: +TheoWinterCH
+  github: aerobless
+  twitter: TheodorWinter
+  avatar: bio-photo.jpg # 160x160 px image for author byline
 
 # Build settings
 markdown: kramdown
