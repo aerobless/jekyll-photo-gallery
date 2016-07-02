@@ -47,9 +47,9 @@ but you need to find out how yourself.)
 ##2. Enable Google Maps Geolocation
 
 1. Obtain a Google Maps "Static Maps API key" from this site: https://developers.google.com/maps/documentation/static-maps/
-⋅⋅1. Create a new project for your site (or chose an existing one).
-⋅⋅2. Make sure that "Google Static Maps API" is selected in the API drawer, then select "Web browser (Javascript)" from the drawer below.
-⋅⋅3. Enter all the URL(s) of your website from which you'll be accessing google maps. E.g. `*yoursite.com*` or `*localhost*` or `*.yoursite.com/*` .. etc.
+  1. Create a new project for your site (or chose an existing one).
+  2. Make sure that "Google Static Maps API" is selected in the API drawer, then select "Web browser (Javascript)" from the drawer below.
+  3. Enter all the URL(s) of your website from which you'll be accessing google maps. E.g. `*yoursite.com*` or `*localhost*` or `*.yoursite.com/*` .. etc.
 2. Open layouts/photo.html and replace the existing key (around line 113) **&key=AIzaSyCMXdSigC-sBH...** with your new key.
 
 #License (MIT)
