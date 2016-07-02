@@ -12,10 +12,11 @@ but you need to find out how yourself.)
 + One URL per picture allows for easy sharing
 + Automatic thumbnail generation (on macOS, Linux)
 + One subpage per picture, ideal for SEO
++ Automatically embedded Schema.org meta information
 + Responsive photo view
 + Easily adaptable layouts
 + Google Maps Geolocation
-+ EXIF tag support
++ EXIF tag supports
 + Support for albums/trips (coming soon)
 
 ![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)
