@@ -19,7 +19,13 @@ but you need to find out how yourself.)
 + EXIF tag supports
 + Support for albums/trips (coming soon)
 
-![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)
+[![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)](http://w1nter.com/jekyll-photo-gallery/photography/)
+
+#Demos
+
+1. [Demo site running the "sample-installation"](http://w1nter.com/jekyll-photo-gallery/photography/)
+2. [My personal blog running a customized version of the plugin](https://theowinter.ch/photography/)\*  
+*\*The sample-installation is newer and has less bugs.*
 
 #Installation Guide
 
@@ -41,7 +47,10 @@ but you need to find out how yourself.)
 ##2. Enable Google Maps Geolocation
 
 1. Obtain a Google Maps "Static Maps API key" from this site: https://developers.google.com/maps/documentation/static-maps/
-2. Open layouts/photo.html and replace the existing key (around line 113) **&key=AIzaSyCMXdSigC-sBH...** with your own key.
+⋅⋅1. Create a new project for your site (or chose an existing one).
+⋅⋅2. Make sure that "Google Static Maps API" is selected in the API drawer, then select "Web browser (Javascript)" from the drawer below.
+⋅⋅3. Enter all the URL(s) of your website from which you'll be accessing google maps. E.g. `*yoursite.com*` or `*localhost*` or `*.yoursite.com/*` .. etc.
+2. Open layouts/photo.html and replace the existing key (around line 113) **&key=AIzaSyCMXdSigC-sBH...** with your new key.
 
 #License (MIT)
  > Copyright (c) 2016 Theodor Winter
