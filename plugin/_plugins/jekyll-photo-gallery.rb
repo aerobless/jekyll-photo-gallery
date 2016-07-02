@@ -114,7 +114,7 @@ module Jekyll
       photos = YAML::load_file('_data/photos.yaml')
       photos.each do |photo, details|
         [nil, *details, nil].each_cons(3){|prev, curr, nxt|
-          if(curr["trip"] == text.strip)
+          if(curr["album"] == text.strip)
             @result = @result+'<div itemscope itemtype="http://schema.org/Photograph">
                                       <a itemprop="image" class="swipebox" title="'+curr["title"]+'" href="/photography/'+curr["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')+'/">
                                         <img alt="'+curr["title"]+'" itemprop="thumbnailUrl" src="/images/photography/thumbnails/'+curr["img"]+'.jpg"/>
@@ -131,6 +131,23 @@ module Jekyll
         }
       end
       @result = @result + '</div>'
+
+      #If you want to configure each album gallery individually you can remove this script
+      #and add it in the template/post directly.
+      @result = @result + '<script>
+                              window.onload=function(){
+                                  $("#gallery").justifiedGallery({
+                                      rowHeight : 220,
+                                      maxRowHeight: 340,
+                                      margins : 5,
+                                      border : 0,
+                                      fixedHeight: false,
+                                      lastRow : \'nojustify\',
+                                      captions: true
+                                  });
+                                  $("#gallery").fadeIn(500);
+                              }
+                          </script>'
     end
 
     def render(context)
