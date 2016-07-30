@@ -2,9 +2,9 @@
 layout: album
 share: true
 comments: true
-tags: [Travel, Europe, City]
+tags: [Travel, USA]
 image:
-  feature: budapest_night2.jpg
+  thumbnail: IMG_4075.jpg
 ---
 
 {% includeGallery UsaSommer2015 %}

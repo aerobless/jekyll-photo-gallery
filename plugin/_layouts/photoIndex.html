@@ -41,11 +41,22 @@
             </div><!-- /.page-image -->
         </div><!-- /.page-feature -->
 
-        <div class="archive-wrap">
-            <div class="page-content">
-                <div id="gallery" style="display:none; margin-bottom: 20px;"></div>
-            </div><!-- /.page-content -->
-        </div><!-- /.archive-wrap -->
+        <div>
+            <br>
+            <h1>Albums</h1>
+            <div>
+                {% for post in site.posts %}
+                    {% if post.layout == 'album' %}
+                        {% include post-grid-cards.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="photoStreamTitle">
+            <br>
+            <h1>Photo Stream</h1>
+            <div id="gallery" style="display:none; margin-bottom: 20px;"></div>
+        </div>
     </div><!-- /.wrap -->
 </div><!-- /#main -->
 
@@ -62,19 +73,7 @@
         thumbnail: "{{ site.url }}/images/photography/thumbnails/{{ photo.img }}.jpg",
         date: "{% exiftag date_time_original,, %}{{ photo.img }}.jpg{% endexiftag %}"
     });
-
-    //DON'T REMOVE, JEKYLL FUNCTION
     //{% endfor %}
-
-    /**
-     * If you want to sort the pictures by date you can use this function. I personally don't use it because the gallery
-     * _can_ look really bad when it sorts multiple panoramas after each other, so I'd rather have a not entirely correctly
-     * sorted gallery that I can manipulate via the photos.yaml.
-     */
-
-    /*photos.sort(function(a,b) {
-     return new Date(b.date).getTime() - new Date(b.date).getTime()
-     });*/
 
     window.onload=function(){
         var INITIAL_PHOTO_LOAD = 30;
