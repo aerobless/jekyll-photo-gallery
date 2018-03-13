@@ -25,8 +25,7 @@ but you need to find out how to install ImageMagick yourself.)
 # Demos
 
 1. [Demo site running the "sample-installation"](http://w1nter.com/jekyll-photo-gallery/photography/)
-2. [My personal blog running a customized version of the plugin](https://theowinter.ch/photography/)\*  
-*\*The sample-installation is newer and has less bugs.*
+2. if you have a site running this (or a modified version of it) send me a comment and I'll add you :)
 
 # Installation Guide
 
