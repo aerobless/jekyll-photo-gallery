@@ -1,4 +1,4 @@
-require 'exifr'
+require 'exifr/jpeg'
 
 #Based on https://github.com/benib/jekyll-exiftag by Beni Buess (MIT License)
 #Edited to work as a Liquid-Block instead of a Liquid-Tag, reads the filename from between the
