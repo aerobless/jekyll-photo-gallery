@@ -6,7 +6,7 @@ such as photo location (Google Maps), ISO, F and speed values.
 The whole plugin is setup so that new photos can be added with minimal effort. Thumbnails are automatically generated with ImageMagick on macOS and Linux. (It may work on windows as well, 
 but you need to find out how to install ImageMagick yourself.)
 
-#Features
+# Features
 + Dynamically loaded photo stream
 + Justified gallery layout
 + One URL per picture allows for easy sharing
@@ -22,13 +22,13 @@ but you need to find out how to install ImageMagick yourself.)
 
 [![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)](http://w1nter.com/jekyll-photo-gallery/photography/)
 
-#Demos
+# Demos
 
 1. [Demo site running the "sample-installation"](http://w1nter.com/jekyll-photo-gallery/photography/)
 2. [My personal blog running a customized version of the plugin](https://theowinter.ch/photography/)\*  
 *\*The sample-installation is newer and has less bugs.*
 
-#Installation Guide
+# Installation Guide
 
 1. Download this repository and copy the contents of the folder "plugin" to your jekyll installation.
 2. Install the following gems or add them to your gemfile if you're using bundler.
@@ -39,16 +39,16 @@ but you need to find out how to install ImageMagick yourself.)
         
         
         
-#Enable optional features
+# Enable optional features
 
-###1. Enable automatic thumbnail generation
+### 1. Enable automatic thumbnail generation
 
 1. Install imagemagick for your system (e.g. `apt-get install imagemagick` for Linux or `brew install imagemagick` on macOS)
 2. Install mini_magick `gem install mini_magick`
 3. Install jekyll-minimagick `gem install jekyll-minimagick`.
 4. Remove the '#' in the file "_plugins/jekyll-generate-thumbnails.rb" to enable thumbnail generation
 
-###2. Enable Google Maps Geolocation
+### 2. Enable Google Maps Geolocation
 
 1. Obtain a Google Maps "Static Maps API key" from this site: https://developers.google.com/maps/documentation/static-maps/
   1. Create a new project for your site (or chose an existing one).
@@ -56,7 +56,7 @@ but you need to find out how to install ImageMagick yourself.)
   3. Enter all the URL(s) of your website from which you'll be accessing google maps. E.g. `*yoursite.com*` or `*localhost*` or `*.yoursite.com/*` .. etc.
 2. Open layouts/photo.html and replace the existing key (around line 113) **&key=AIzaSyCMXdSigC-sBH...** with your new key.
 
-###3. Embed an album/gallery in a post
+### 3. Embed an album/gallery in a post
 1. Add album meta-data to the photos you want to include in your post.
   1. Go to `_data/photos.yaml`
   2. Add the property `album: uniqueAlbumName`
@@ -65,7 +65,7 @@ but you need to find out how to install ImageMagick yourself.)
 
 
 
-#Known bugs & limitations
+# Known bugs & limitations
 
 **1. Fixed order in detail view:**  
 Atm every photo detail page contains its "previous picture" & "next picture" information. So even though you can change
@@ -82,7 +82,7 @@ To make the setup easier for people who just copy the specific templates. Includ
 
 
 
-#Troubleshooting
+# Troubleshooting
 If the gallery doesn't appear in your page but the files have been generated correctly then it's likely that there is a javascript error.
 In order to find the problem it's best to open the javascript console on Chrome (or your browser of choice) and to reload the page. If there's an error
 it will now appear in the console output.
@@ -98,7 +98,7 @@ in a post the template of the post also has to include these CSS files.
 
 
 
-#License (MIT)
+# License (MIT)
  > Copyright (c) 2016 Theodor Winter
  
  > Permission is hereby granted, free of charge, to any person obtaining a copy
