@@ -20,11 +20,11 @@ but you need to find out how to install ImageMagick yourself.)
 + Support for albums/trips (alpha)
 + Embeddable galleries for posts (alpha)
 
-[![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)](http://w1nter.com/jekyll-photo-gallery/photography/)
+[![Example](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)](https://raw.githubusercontent.com/aerobless/jekyll-photo-gallery/master/example.jpg)
 
 # Demos
 
-1. [Demo site running the "sample-installation"](http://w1nter.com/jekyll-photo-gallery/photography/)
+1. ~~[Demo site running the "sample-installation"]~~
 2. if you have a site running this (or a modified version of it) send me a comment and I'll add you :)
 
 # Installation Guide
