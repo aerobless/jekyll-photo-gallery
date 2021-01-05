@@ -1,3 +1,5 @@
+## Plugin is outdated & not maintained. It doesn't work with Jekyll 4+ out of the box.
+
 # Jekyll-Photo-Gallery
 With Jekyll-Photo-Gallery you can easily generate a photo gallery for your Jekyll site or blog.
 Jekyll-Photo-Gallery generates a static index and a page for every photo based on the layouts photoIndex.html and photo.html.
