@@ -1,4 +1,4 @@
-## Plugin is outdated & not maintained. It doesn't work with Jekyll 4+ out of the box.
+## Plugin is outdated & not maintained. It doesn't work with Jekyll 4+
 
 # Jekyll-Photo-Gallery
 With Jekyll-Photo-Gallery you can easily generate a photo gallery for your Jekyll site or blog.
